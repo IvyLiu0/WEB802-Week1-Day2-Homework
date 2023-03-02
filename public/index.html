@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    
+
+</head>
+<body>
+    <aside class="container" id="leftside"></aside>
+    <aside class="container" id="rightside"></aside>
+    <div id="container" class="container">
+        <div id= "component1">
+            <mycomponent1></mycomponent1>
+        </div>
+        <!-- Navigation -->
+        <nav id="navigation" class="navbar navbar-expand-lg navbar-dark pl-4">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Recipes <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Lifestyle</a>
+                <a class="nav-item nav-link" href="#">VIdeos</a>
+                <a class="nav-item nav-link" href="#">About</a>
+              </div>
+            </div>
+          </nav>
+
+        <main>
+        
+            <aside id="photos">
+                <img src="images/chili.jpg" alt="White Chicken Chili" width="180">
+            </aside>
+            <div id = "component2">
+                <mycomponent2></mycomponent2>
+            </div>            
+        
+        <!-- blog -->
+        <section id="blogposts" class="row">
+            <div class="post col-lg-11">
+                    <img v-on:click="displayInfo" v-bind:src="obj.profile" alt="profile image" width="40px" height="30px">
+                    {{ obj.author }} — 
+                    {{ obj.date }}
+                    {{ obj.reply }}
+                    <div class="message" v-html = "obj.message"></div>
+                    <div class="modal3" v-show="obj.isShowMyModal">
+                        <button class="close-button" type="button" v-on:click="obj.isShowMyModal = false">X</button>
+                        <h3>{{ obj.author }}</h3>
+                        <div class="modalInfo">
+                            <span class="foodie"><b>Foodie Level:&nbsp;</b></span><span class="modalDisc">{{ obj.foodieLevel }}</span>
+                            <br><br>
+                            <p class="foodie"><b>Bio:</b></p>
+                            <div class="modalDisc">
+                                {{ obj.bio }}
+                            </div>
+                            <button class="" type="button" v-on:click="obj.isShowMyModal = false">Close</button>
+                        </div>
+                    </div>
+            </div>
+            
+
+            <div class="post col-lg-11">
+                <img v-on:click="displayInfo1" v-bind:src="obj1.profile" alt="profile image" width="40px" height="30px">
+                {{ obj1.author }} — 
+                {{ obj1.date }}
+                {{ obj1.reply }}
+                <div class="message" v-html = "obj.message"></div>
+                <div class="modal3" v-show="obj1.isShowMyModal">
+                    <button class="close-button" type="button" v-on:click="obj1.isShowMyModal = false">X</button>
+                    <h3>{{ obj1.author }}</h3>
+                    <div class="modalInfo">
+                        <span class="foodie"><b>Foodie Level:&nbsp;</b></span><span class="modalDisc">{{ obj1.foodieLevel }}</span>
+                        <br><br>
+                        <p class="foodie"><b>Bio:</b></p>
+                        <div class="modalDisc">
+                            {{ obj1.bio }}
+                        </div>
+                        <button class="" type="button" v-on:click="obj1.isShowMyModal = false">Close</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="post col-lg-11">
+            <img v-on:click="displayInfo2" v-bind:src="obj2.profile" alt="profile image" width="40px" height="30px">
+            {{ obj2.author }} — 
+            {{ obj2.date }}
+            {{ obj2.reply }}
+            <div class="message" v-html = "obj2.message"></div>
+            <div class="modal1" v-show="obj2.isShowMyModal">
+                <button class="close-button" type="button" v-on:click="obj2.isShowMyModal = false">X</button>
+                <h3>{{ obj2.author }}</h3>
+                <div class="modalInfo">
+                    <span class="foodie"><b>Foodie Level:&nbsp;</b></span><span class="modalDisc">{{ obj2.foodieLevel }}</span>
+                    <br><br>
+                    <p class="foodie"><b>Bio:</b></p>
+                    <div class="modalDisc">
+                        {{ obj2.bio }}
+                    </div>
+                    <button class="" type="button" v-on:click="obj2.isShowMyModal = false">Close</button>
+                </div>
+            </div>
+    </div>
+
+        <div class="post col-lg-11">
+            <img v-on:click="displayInfo3" v-bind:src="obj3.profile" alt="profile image" width="40px" height="30px">
+            {{ obj3.author }} — 
+            {{ obj3.date }}
+            {{ obj3.reply }}
+            <div class="message" v-html = "obj3.message"></div>
+            <div class="modal2" v-show="obj3.isShowMyModal">
+                <button class="close-button" type="button" v-on:click="obj3.isShowMyModal = false">X</button>
+                <h3>{{ obj3.author }}</h3>
+                <div class="modalInfo">
+                    <span class="foodie"><b>Foodie Level:&nbsp;</b></span><span class="modalDisc">{{ obj3.foodieLevel }}</span>
+                    <br><br>
+                    <p class="foodie"><b>Bio:</b></p>
+                    <div class="modalDisc">
+                        {{ obj3.bio }}
+                    </div>
+                    <button class="" type="button" v-on:click="obj3.isShowMyModal = false">Close</button>
+                </div>
+            </div>
+    </div>
+
+        </section>
+
+        </main>
+
+        <footer>
+            &copy; Copyright FOOD BLOG
+        </footer>
+    
+    </div>
+
+<script src="javascripts/data.js"></script>
+<!-- Bootstrap jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

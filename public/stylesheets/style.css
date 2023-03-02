@@ -1,0 +1,202 @@
+
+    * {
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #leftside {
+        float:left;
+        width: 30%;
+        height: 1200px;
+        background-color:rgb(77, 192, 154);
+    }
+    #rightside {
+        float:left;
+        width: 70%;
+        height: 1200px;
+        background-color:rgb(238, 226, 192);
+        position:relative;
+    }
+    #container {
+        background-color:rgba(255, 255, 255, 0.85);
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        width: 1100px;
+        height: 1100px;
+        border-radius: 0.7em;
+    }
+
+    #navigation{
+        background-color: rgb(77, 192, 154);
+    }
+
+    header {
+        height: 80px;
+        background-color:rgba(231, 229, 229, 0.5);
+        font-size: 2.75em;
+        padding:0.15em 0 0.5em 0.5em;
+        color:rgb(216, 150, 7);
+    }
+    header span {
+        font-family: 'Sacramento', cursive;
+    }
+    main {
+        position: relative;
+    }
+    main h2 {
+        position: absolute;
+        left: 20%;
+        top: 30px;
+        margin: 25px 0 200px 70px;
+        color:rgb(60, 190, 160);
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    main #photos img {
+        margin: 1.5em;
+        border: 0.85em solid rgb(255, 255, 255);
+    }
+    section#blogposts {
+        position: absolute;
+        left: 20%;
+        top: 60px;
+        padding: 50px;
+    }
+    main .post {
+        margin: 10px 25px 0 25px;
+        padding: 20px 25px 10px 25px;
+        border: 2px solid rgba(83, 78, 58, 0.6);
+        border-radius: 0.5em;
+    }
+
+    .modal3{
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 30px;
+        width: 500px;
+        border-radius:5%;
+        text-align: left;
+        /* z-index: 2; */
+        position: absolute;
+        top: -80%;
+    }
+
+    .modal1{
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 30px;
+        width: 500px;
+        border-radius:5%;
+        text-align: left;
+        /* z-index: 2; */
+        position: absolute;
+        top: -100%;
+    }
+
+    .modal2{
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 30px;
+        width: 500px;
+        border-radius:5%;
+        text-align: left;
+        /* z-index: 2; */
+        position: absolute;
+        top: -200%;
+    }
+    
+    .message{
+        margin-top: 10px;
+    }
+
+    .foodie{
+        font-size: small;
+    }
+
+    .modalDisc{
+        font-size: small;
+        margin-bottom: 30px;
+    }
+
+    .close-button{
+        float: right;
+    }
+
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        font-size: 0.85em;
+        padding-top: 20px;
+    }
+
+
+    /* Media Queries */
+@media (max-width: 992px) {
+    #container {
+        width: 800px;
+        height: 1400px;
+    }
+
+    #leftside {
+        height: 1500px;
+    }
+
+    #rightside{
+        height: 1500px;
+    }
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 600px;
+        height: 1800px;
+    }
+
+    #leftside {
+        height: 2000px;
+    }
+
+    #rightside{
+        height: 2000px;
+    }
+}
+
+@media (max-width: 650px) {
+    #container {
+        width: 500px;
+        height: 1900px;
+    }
+
+    #leftside {
+        height: 2000px;
+    }
+
+    #rightside{
+        height: 2000px;
+    }
+}
+
+@media (max-width: 400px){
+    #container {
+    width: 300px;
+    height: 3800px;
+}
+
+#leftside {
+    height: 3900px;
+}
+
+#rightside{
+    height: 3900px;
+}
+
+
+}
